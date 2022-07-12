@@ -3,7 +3,6 @@ function reverseWords(sentence) {
   //reverses the order of letters for each word, but words remain in same order
   //returns reversed sentence
 
-
   const newSentence = sentence
     //splits sentence into individual words
     .split(" ")
@@ -21,9 +20,6 @@ function reverseWords(sentence) {
     .join("");
 }
 
-
-
-
 function titleCase(sentence) {
   //first we want to break up each word into pieces
   //then we want to target the first letter of each word and capitalize it
@@ -34,8 +30,6 @@ function titleCase(sentence) {
       .toUpperCase() + word.slice(1).toLowerCase()) //capitalize the first letter and add it to the rest of the word lowercase
     .join(" ");//join the sentence back together
 }
-
-
 
 function oddishOrEvenish(number) {
   //first turn the number into string characters so we can split it
@@ -72,9 +66,6 @@ function oddishOrEvenish(number) {
     }
   }
 
-
-
-
   function fizzBuzz(number) {
     //function takes in a number 'n' as an argument
     //it returns an array of numbers in order from 1 to 'n'
@@ -95,7 +86,14 @@ function oddishOrEvenish(number) {
       }
     }
     return arr;
-
   }
 
-module.exports = { reverseWords, titleCase, oddishOrEvenish, at, fizzBuzz };
+  function anagrams(wordOne, wordTwo) {
+    const wordOneArray = wordOne.split('').sort();//break up word one into letters, then sort the letters alphabetically
+    const wordTwoArray = wordTwo.split('').sort();//break up word two into letters, then sort the letters alphabetically
+    const wordOneString = wordOneArray.join('');//rejoin the letters 
+    const wordTwoString = wordTwoArray.join('');//rejoin the letters
+    return wordOneString === wordTwoString ? true : false;//check if the letters are the same, if true return true, if false return false
+  }
+
+module.exports = { reverseWords, titleCase, oddishOrEvenish, at, fizzBuzz, anagrams };
