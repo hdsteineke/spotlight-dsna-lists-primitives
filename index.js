@@ -20,7 +20,9 @@ function reverseWords(sentence) {
     //joins them back together
     .join("");
 }
-console.log('reverseWords', reverseWords('alchemy rocks gold'));
+
+
+
 
 function titleCase(sentence) {
   //first we want to break up each word into pieces
@@ -33,4 +35,30 @@ function titleCase(sentence) {
     .join(" ");//join the sentence back together
 }
 
-module.exports = { reverseWords, titleCase };
+
+
+function oddishOrEvenish(number) {
+  //first turn the number into string characters so we can split it
+  const newNumber = number
+    .toString()
+    .split('')
+  //then we want to turn characters back to numbers so we can do math with them
+    .map(num => {return Number(num)} );
+
+    //here we set up the operation to add the digits inside the newNumber array
+    let sum = 0;
+    for (i = 0; i < newNumber.length; i++) {
+      sum += newNumber[i];
+    }
+    //we use modulo to determine if there is a remainder. 
+      //If remainder is 0, return 'Evenish'
+    if (sum % 2 === 0) {
+      return 'Evenish';
+      //Else return 'Oddish'
+    } else {
+      return 'Oddish';
+    }
+  }
+  
+
+module.exports = { reverseWords, titleCase, oddishOrEvenish };
