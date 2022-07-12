@@ -71,6 +71,31 @@ function oddishOrEvenish(number) {
       return arr[arr.length - (index * (-1))] //we take the negative index, make it a positive and subtract it from the length of the array
     }
   }
-  
 
-module.exports = { reverseWords, titleCase, oddishOrEvenish, at };
+
+
+
+  function fizzBuzz(number) {
+    //function takes in a number 'n' as an argument
+    //it returns an array of numbers in order from 1 to 'n'
+    const arr = [];
+    for (let i = 1; i <= number; i++) {
+      //if number is multiple of 5 && 3, return 'FizzBuzz'
+      if (i % 3 === 0 && i % 5 === 0) {
+        arr.push('FizzBuzz');
+        //if i is multiple of 3, return 'Fizz'
+      } else if (i % 3 === 0) {
+        arr.push('Fizz')
+        //if i is multiple of 5, return 'Buzz'
+      } else if (i % 5 === 0) {
+        arr.push('Buzz');
+        //if item is neither multiple of 3 nor 5, push the index placement into array
+      } else {
+        arr.push(i);
+      }
+    }
+    return arr;
+
+  }
+
+module.exports = { reverseWords, titleCase, oddishOrEvenish, at, fizzBuzz };
