@@ -59,6 +59,18 @@ function oddishOrEvenish(number) {
       return 'Oddish';
     }
   }
+
+  function at(arr, index) {
+    //we are given all the things, and the things do things
+    //we are given the array and the index wanted, and should return the item at that index point
+    //if the number is positive the index is read left to right
+    //if the number is negative, the index is read right to left
+    if (index >= 0 ) { //the index given is greater than or equal to 0
+      return arr[index]; //returns the item in the index place
+    } if (index < 0) { //the index is less than 0
+      return arr[arr.length - (index * (-1))] //we take the negative index, make it a positive and subtract it from the length of the array
+    }
+  }
   
 
-module.exports = { reverseWords, titleCase, oddishOrEvenish };
+module.exports = { reverseWords, titleCase, oddishOrEvenish, at };
