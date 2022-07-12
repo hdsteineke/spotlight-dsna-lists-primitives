@@ -13,6 +13,12 @@ Write a function that takes a sentence string and returns a new string that is t
 
 ```js
 function reverseWords(sentence) {
+  //takes in a sentence of strings
+  //reverses the order of letters for each word, but words remain in same order
+  //returns reversed sentence
+  sentence.split(" ").reverse().join("");
+
+}
 ```
 
 > **You can assume valid inputs and no punctuation**

@@ -1,4 +1,4 @@
-const { reverseWords } = require(".");
+const { reverseWords } = require("./index.js");
 
 describe("reverseWords", () => {
   it("should reverse the words of a sentence", () => {
