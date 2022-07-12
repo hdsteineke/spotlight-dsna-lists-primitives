@@ -8,6 +8,6 @@ describe("reverseWords", () => {
 
 describe("titleCase", () => {
   it("should return the sentence capitalizing all the first letters", () => {
-    expect(titleCase("alchemy rocks gold")).toBe("Alchemy Rocks Gold");
+    expect(titleCase("alchemy ROCKS goLD")).toBe("Alchemy Rocks Gold");
   });
 });
