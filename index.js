@@ -22,4 +22,11 @@ function reverseWords(sentence) {
 }
 console.log('reverseWords', reverseWords('alchemy rocks gold'));
 
-module.exports = { reverseWords };
+function titleCase(sentence) {
+  //first we want to break up each word into pieces
+  //then we want to target the first letter of each word and capitalize it
+  //then we want to join the words back together in the same string
+  return sentence.split(" ").map(word => word.slice(0, 1).toUpperCase() + word.slice(1)).join(" ");
+}
+
+module.exports = { reverseWords, titleCase };
