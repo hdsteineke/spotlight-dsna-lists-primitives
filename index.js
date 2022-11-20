@@ -35,19 +35,21 @@ function titleCase(sentence) {
 //////////////////////////////////////
 
 function oddishOrEvenish(number) {
-  const initialValue = 0;
   // edge case for empty parameters
-  if (!number) return "Invalid entry";
+  if (!number) return 'Invalid entry';
+  let sum = 0;
   //need to split number into an array of individual digits (needs to be string first)
-  const numArray = number.toString().split("");
+  const numArray = number.toString().split("").map(num => {return Number(num)});
   //sum individual digits together
-  const sum = numArray.reduce(
-    (acc, currentValue) => acc + currentValue, initialValue
-    );
-
-  //if sum is even, return evenish
+  for (let i = 0; i < numArray.length; i++) {
+    sum += numArray[i];
+  }
   if (sum % 2 === 0) return "Evenish";
   return "Oddish";
+
+
+  //if sum is even, return evenish
+
 
   //else return oddish
 }
