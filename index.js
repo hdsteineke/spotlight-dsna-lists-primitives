@@ -90,8 +90,11 @@ function anagrams(wordOne, wordTwo) {
   //takes in two strings
 
   //reads all the letters in word one (needs to be an array)
-  const newOne = wordOne.toLowerCase().split("").sort();
-  const newTwo = wordTwo.toLowerCase().split("").sort();
+  const newOne = wordOne.toLowerCase().split("").sort().join("");
+  const newTwo = wordTwo.toLowerCase().split("").sort().join("");
+
+  console.log('newOne', newOne);
+  console.log('newTwo', newTwo);
   
   if (newOne === newTwo) {
     return true;

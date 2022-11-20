@@ -53,15 +53,15 @@ describe("fizzBuzz", () => {
 
 
 describe("anagrams", () => {
-  it("should return true if two word inputs contain the exact same letters", () => {
-    expect(anagrams('cat', 'dog')).toBe(false);
+  it("should return false if two word inputs contain different letters", () => {
+    expect(anagrams('cat', 'dog')).toEqual(false);
   });
 });
 
 
 describe("anagrams", () => {
   it("should return true if two word inputs contain the exact same letters", () => {
-    expect(anagrams('lone', 'noel')).toBe(true);
+    expect(anagrams('lone', 'noel')).toEqual(true);
   });
 });
 
