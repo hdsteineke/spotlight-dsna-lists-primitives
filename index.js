@@ -79,11 +79,9 @@ function fizzBuzz(number) {
     } else {
       array.push(i);
     }
-    return array;
   }
-  
-
   //return an array of values from  0 to number
+  return array;
 }
 
 
