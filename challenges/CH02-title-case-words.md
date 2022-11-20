@@ -11,6 +11,7 @@ Write a function that takes a sentence string and returns a new string that is t
 
 ```js
 function titleCase(sentence) {
+}
 ```
 
 > **You can assume valid inputs=**
