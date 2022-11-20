@@ -27,12 +27,9 @@ console.log('reverseWords', reverseWords('alchemy rocks gold'));
 
 function titleCase(sentence) {
   //split sentence into array of string
-  const array = sentence.split(" ");
-  //map through each item[i] in the array and convert first letter of each item to uppercase
-  for (let i = 0; i < array.length; i++) {
-    i[0].toUpperCase();
-  }
-  return array.join(" ");
+  return sentence
+    .split(" ")
+    .map((word) => word.slice(0, 1).toUpperCase().slice(1).join(" "))
 
 }
 
