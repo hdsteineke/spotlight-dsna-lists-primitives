@@ -55,11 +55,24 @@ function at(arr, index) {
   //be able to read through an array up until the given index
   for (let i = 0; i < arr.length; i++) {
     if (i === index) {
+      //return the value at the given index of the array
       return arr[i]
     }
   }
-  //return the value at the given index of the array
+}
+
+/////////////////////////////////
+
+function fizzBuzz(number) {
+  //identify numbers from 0 - n
+  
+  //if divisible by 3 && 5 return 'FizzBuzz'
+
+  //if divisible by 3 return 'Fizz'
+
+  //if divisible by 5 return 'Buzz'
 
 }
 
-module.exports = { reverseWords, titleCase, oddishOrEvenish, at };
+
+module.exports = { reverseWords, titleCase, oddishOrEvenish, at, fizzBuzz };

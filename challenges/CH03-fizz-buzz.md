@@ -10,6 +10,7 @@ Write a function that takes a positive integer `n`, and returns an array that co
 
 ```js
 function fizzBuzz(number) {
+}
 ```
 
 > **You can assume valid input**
