@@ -66,7 +66,7 @@ function at(arr, index) {
 function fizzBuzz(number) {
   const array = [];
   //identify numbers from 0 - n
-  for (let i = 0; i < number; i++) {
+  for (let i = 1; i <= number; i++) {
     //if divisible by 3 && 5 return 'FizzBuzz'
     if (i % 3 === 0 && i % 5 === 0) {
       array.push('FizzBuzz');
@@ -74,7 +74,7 @@ function fizzBuzz(number) {
     } else if (i % 3 === 0) {
       array.push('Fizz');
       //if divisible by 5 return 'Buzz'
-    } else if ([i] % 5 === 0) {
+    } else if (i % 5 === 0) {
       array.push('Buzz');
     } else {
       array.push(i);
