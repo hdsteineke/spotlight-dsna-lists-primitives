@@ -9,6 +9,7 @@ Write a function that takes two words as arguments and returns true if they are 
 
 ```js
 function anagrams(wordOne, wordTwo) {
+}
 ```
 
 > **You can assume valid input**

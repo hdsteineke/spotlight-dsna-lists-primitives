@@ -1,4 +1,4 @@
-const { reverseWords, titleCase, oddishOrEvenish, at, fizzBuzz } = require("./index.js");
+const { reverseWords, titleCase, oddishOrEvenish, at, fizzBuzz, anagrams } = require("./index.js");
 
 describe("reverseWords", () => {
   it("should reverse the words of a sentence", () => {
@@ -48,6 +48,20 @@ describe("fizzBuzz", () => {
 describe("fizzBuzz", () => {
   it("should returns all values up to given n value, where fizz replaces multiples of 3, 5 replaces multiples of 5, and fizzBuzz multiples of 5 && 3", () => {
     expect(fizzBuzz(5)).toEqual([1,2,'Fizz',4,'Buzz']);
+  });
+});
+
+
+describe("anagrams", () => {
+  it("should return true if two word inputs contain the exact same letters", () => {
+    expect(anagrams('cat', 'dog')).toBe(false);
+  });
+});
+
+
+describe("anagrams", () => {
+  it("should return true if two word inputs contain the exact same letters", () => {
+    expect(anagrams('lone', 'noel')).toBe(true);
   });
 });
 

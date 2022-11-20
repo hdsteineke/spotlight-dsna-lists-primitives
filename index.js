@@ -84,5 +84,25 @@ function fizzBuzz(number) {
   return array;
 }
 
+////////////////////////////////////////////
 
-module.exports = { reverseWords, titleCase, oddishOrEvenish, at, fizzBuzz };
+function anagrams(wordOne, wordTwo) {
+  //takes in two strings
+
+  //reads all the letters in word one (needs to be an array)
+  const newOne = wordOne.toLowerCase().split("").sort();
+  const newTwo = wordTwo.toLowerCase().split("").sort();
+  
+  if (newOne === newTwo) {
+    return true;
+  } return false;
+
+  //compares them to all the letters in word two (also needs to be an array)
+
+  //we can achieve this by sorting the values of each array and changing them all to a like case
+
+  //returns a boolean
+}
+
+
+module.exports = { reverseWords, titleCase, oddishOrEvenish, at, fizzBuzz, anagrams };
