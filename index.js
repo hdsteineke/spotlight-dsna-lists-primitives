@@ -47,11 +47,19 @@ function oddishOrEvenish(number) {
   if (sum % 2 === 0) return "Evenish";
   return "Oddish";
 
-
-  //if sum is even, return evenish
-
-
-  //else return oddish
 }
 
-module.exports = { reverseWords, titleCase, oddishOrEvenish };
+//////////////////////////////////
+
+function at(arr, index) {
+  //be able to read through an array up until the given index
+  for (let i = 0; i < arr.length; i++) {
+    if (i === index) {
+      return arr[i]
+    }
+  }
+  //return the value at the given index of the array
+
+}
+
+module.exports = { reverseWords, titleCase, oddishOrEvenish, at };
