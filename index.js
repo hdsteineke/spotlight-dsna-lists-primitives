@@ -29,7 +29,7 @@ function titleCase(sentence) {
   //split sentence into array of string
   return sentence
     .split(" ")
-    .map((word) => word.slice(0, 1).toUpperCase().slice(1).join(" "))
+    .map(word => word.slice(0, 1).toUpperCase() + word.slice(1).toLowerCase().join(""))
 
 }
 
