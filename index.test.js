@@ -1,4 +1,4 @@
-const { reverseWords, titleCase, oddishOrEvenish, at } = require("./index.js");
+const { reverseWords, titleCase, oddishOrEvenish, at, fizzBuzz } = require("./index.js");
 
 describe("reverseWords", () => {
   it("should reverse the words of a sentence", () => {

@@ -68,14 +68,16 @@ function fizzBuzz(number) {
   //identify numbers from 0 - n
   for (let i = 0; i < number; i++) {
     //if divisible by 3 && 5 return 'FizzBuzz'
-    if ([i] % 3 === 0 && [i] % 5 === 0) {
+    if (i % 3 === 0 && i % 5 === 0) {
       array.push('FizzBuzz');
       //if divisible by 3 return 'Fizz'
-    } else if ([i] % 3 === 0) {
+    } else if (i % 3 === 0) {
       array.push('Fizz');
       //if divisible by 5 return 'Buzz'
     } else if ([i] % 5 === 0) {
       array.push('Buzz');
+    } else {
+      array.push(i);
     }
     return array;
   }
