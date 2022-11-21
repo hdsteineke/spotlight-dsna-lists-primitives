@@ -87,25 +87,70 @@ function fizzBuzz(number) {
 ////////////////////////////////////////////
 
 function anagrams(wordOne, wordTwo) {
-  //takes in two strings
-
-  //reads all the letters in word one (needs to be an array)
-  const newOne = wordOne.toLowerCase().split("").sort().join("");
-  const newTwo = wordTwo.toLowerCase().split("").sort().join("");
-
-  console.log('newOne', newOne);
-  console.log('newTwo', newTwo);
-  
-  if (newOne === newTwo) {
+  if (wordOne
+      .toLowerCase()
+      .split("")
+      .sort()
+      .join("") === wordTwo
+        .toLowerCase()
+        .split("")
+        .sort()
+        .join("")) {
     return true;
   } return false;
+  // const newOne = wordOne.toLowerCase().split("").sort().join("");
+  // const newTwo = wordTwo.toLowerCase().split("").sort().join("");
+  
+  // if (newOne === newTwo) {
+  //   return true;
+  // } return false;
+}
 
-  //compares them to all the letters in word two (also needs to be an array)
+////////////////////////////
 
-  //we can achieve this by sorting the values of each array and changing them all to a like case
+function uniqueString(strings) {
+}
 
-  //returns a boolean
+//////////////////////////////////////
+
+function largestEven(array) {
+  const newArr = [];
+  //need to read through the entire to array
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      newArr.push(array[i]);
+    }
+  }
+
+  if (newArr.length === 0) {
+    return -1;
+  } else {
+    newArr.sort(function(a, b){return a - b});
+    return newArr[newArr.length - 1];
+  }
+}
+
+/////////////////////////////////////////
+
+function largestEven2(array) {
+  let largest = -1;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0 && array[i] > largest) {
+      largest = array[i];
+    } 
+  } 
+  return largest;
+}
+
+////////////////////////////////////////
+
+function largestEven3(array) {
+  const filteredItems = array.filter(i => i % 2 === 0);
+
+  if (filteredItems.length > 0) {
+    return Math.max(...filteredItems);
+  } return -1;
 }
 
 
-module.exports = { reverseWords, titleCase, oddishOrEvenish, at, fizzBuzz, anagrams };
+module.exports = { reverseWords, titleCase, oddishOrEvenish, at, fizzBuzz, anagrams, uniqueString, largestEven, largestEven2, largestEven3 };

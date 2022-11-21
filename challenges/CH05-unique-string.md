@@ -9,6 +9,7 @@ Write a function that takes an array of strings. All strings contains similar le
 
 ```js
 function uniqueString(strings) {
+}
 ```
 
 > **You can assume valid input**

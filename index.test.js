@@ -1,4 +1,4 @@
-const { reverseWords, titleCase, oddishOrEvenish, at, fizzBuzz, anagrams } = require("./index.js");
+const { reverseWords, titleCase, oddishOrEvenish, at, fizzBuzz, anagrams, largestEven, largestEven2, largestEven3 } = require("./index.js");
 
 describe("reverseWords", () => {
   it("should reverse the words of a sentence", () => {
@@ -62,6 +62,43 @@ describe("anagrams", () => {
 describe("anagrams", () => {
   it("should return true if two word inputs contain the exact same letters", () => {
     expect(anagrams('lone', 'noel')).toEqual(true);
+  });
+});
+
+
+// describe("uniqueString", () => {
+//   it("return the word that doesn't match", () => {
+//     expect(uniqueStrings()).toEqual();
+//   });
+// });
+
+
+describe("largestEven", () => {
+  it("should return largest even number, or -1", () => {
+    expect(largestEven([1,2,3,244,6,7,92,3,65])).toEqual(244);
+    expect(largestEven([1,3,5,9,11])).toEqual(-1);
+  });
+});
+
+
+describe("largestEven2", () => {
+  it("should return largest even number, or -1", () => {
+    expect(largestEven2([1,2,3,244,6,7,92,3,65])).toEqual(244);
+    expect(largestEven2([1,3,5,9,11])).toEqual(-1);
+  });
+});
+
+describe("largestEven2", () => {
+  it("should return largest even number, or -1", () => {
+    expect(largestEven2([1,2,3,244,6,7,92,3,65])).toEqual(244);
+    expect(largestEven2([1,3,5,9,11])).toEqual(-1);
+  });
+});
+
+describe("largestEven3", () => {
+  it("should return largest even number, or -1", () => {
+    expect(largestEven3([1,2,3,244,6,7,92,3,65])).toEqual(244);
+    expect(largestEven3([1,3,5,9,11])).toEqual(-1);
   });
 });
 
